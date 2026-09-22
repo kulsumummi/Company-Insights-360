@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Company Insights 360 — Sales & HR Data Analysis Portfolio Project by Data Analyst Fresher using Excel, MySQL, Python, Pandas, and Power BI.">
+    <title>Company Insights 360 — Sales & HR Data Analysis Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">📊 Company Insights 360</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#datasets">Datasets</a></li>
+                <li><a href="#sql">MySQL</a></li>
+                <li><a href="#python">Python</a></li>
+                <li><a href="#powerbi">Power BI</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <span class="hero-badge">Fresher Data Analyst Portfolio Project</span>
+            <h1 class="hero-title">Company Insights 360<br>Sales & HR Data Analysis</h1>
+            <p class="hero-description">
+                An end-to-end data analytics project demonstrating data cleaning, MySQL database querying, 
+                Python/Pandas exploratory analysis, and 3-page interactive Power BI dashboard design.
+            </p>
+            <div class="tech-tags">
+                <span class="tag">Excel</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">HTML5 & CSS3</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="https://github.com" target="_blank" class="btn btn-primary">View on GitHub</a>
+                <a href="#overview" class="btn btn-outline">Explore Project</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Workflow Section -->
+        <section id="workflow">
+            <div class="container">
+                <h2 class="section-title">Project Analytics Workflow</h2>
+                <p class="section-subtitle">Structured step-by-step pipeline from raw Excel files to executive dashboard insights</p>
+                
+                <div class="workflow-grid">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Data Preparation</h3>
+                        <p class="step-desc">Inspected & converted CSV/Excel files into clean dataset structures.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">MySQL Schema</h3>
+                        <p class="step-desc">Designed DDL tables with Primary Keys & Foreign Key relationships.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">SQL Querying</h3>
+                        <p class="step-desc">Wrote 13 business queries using aggregations, JOINs, HAVING, and CASE.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Python Analysis</h3>
+                        <p class="step-desc">Executed Pandas data validation, quality audits, and Matplotlib charts.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Power BI & DAX</h3>
+                        <p class="step-desc">Built 3-page dashboard blueprint with calculated DAX measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h2 class="section-title">Project Overview & Objectives</h2>
+                <p class="section-subtitle">Solving core business challenges across HR workforce management and sales revenue growth</p>
+                
+                <div class="card-grid">
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">🎯 Business Objective</h3>
+                        </div>
+                        <p class="card-desc">
+                            The primary goal of this project is to integrate departmental HR records and sales transaction logs 
+                            to answer critical management questions regarding compensation efficiency, regional sales growth, 
+                            and workforce distribution.
+                        </p>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">🔍 Analytics Scope</h3>
+                        </div>
+                        <p class="card-desc">
+                            Covers 5 departments, 100 employee records, and 1,000 sales transactions closed between 2020 and 2024 across 
+                            North, South, East, and West sales territories.
+                        </p>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">💡 Core Problem Solved</h3>
+                        </div>
+                        <p class="card-desc">
+                            Identifies top revenue-generating sales representatives, evaluates department budget utilization vs salary spend, 
+                            and pinpoints product categories with maximum profit margins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Datasets Overview Section -->
+        <section id="datasets">
+            <div class="container">
+                <h2 class="section-title">Datasets Architecture</h2>
+                <p class="section-subtitle">Detailed field dictionary for the 3 interconnected business tables</p>
+                
+                <div class="card-grid">
+                    <!-- Departments Card -->
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">🏢 departments</h3>
+                            <span class="card-meta">5 Rows Master</span>
+                        </div>
+                        <p class="card-desc">Stores department leadership, budget allocation, and target headcount.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">Department (PK)</span> <span class="col-desc">Unique Department Name</span></li>
+                            <li><span class="col-name">Manager</span> <span class="col-desc">Department Head</span></li>
+                            <li><span class="col-name">Budget</span> <span class="col-desc">Annual Budget (INR)</span></li>
+                            <li><span class="col-name">Headcount</span> <span class="col-desc">Target Staff Size</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Employees Card -->
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">👤 employees</h3>
+                            <span class="card-meta">100 Rows Master</span>
+                        </div>
+                        <p class="card-desc">HR records detailing salaries, ratings, experience, and cities.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">EmployeeID (PK)</span> <span class="col-desc">Unique Staff ID</span></li>
+                            <li><span class="col-name">Department (FK)</span> <span class="col-desc">Links to departments</span></li>
+                            <li><span class="col-name">Salary</span> <span class="col-desc">Annual Base Pay</span></li>
+                            <li><span class="col-name">PerformanceScore</span> <span class="col-desc">Rating (1.0 - 5.0)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sales Card -->
+                    <div class="data-card">
+                        <div class="card-header">
+                            <h3 class="card-title">🛒 sales</h3>
+                            <span class="card-meta">1,000 Rows Log</span>
+                        </div>
+                        <p class="card-desc">Sales transactions closed by sales reps across regions and categories.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">OrderID (PK)</span> <span class="col-desc">Unique Transaction ID</span></li>
+                            <li><span class="col-name">EmployeeID (FK)</span> <span class="col-desc">Links to employees</span></li>
+                            <li><span class="col-name">Sales & Profit</span> <span class="col-desc">Revenue & Net Profit</span></li>
+                            <li><span class="col-name">Region & Category</span> <span class="col-desc">Territory & Product Type</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MySQL Analysis Section -->
+        <section id="sql">
+            <div class="container">
+                <h2 class="section-title">MySQL Database & Queries</h2>
+                <p class="section-subtitle">Structured SQL DDL schema and business analysis queries</p>
+                
+                <div class="analysis-box">
+                    <h3 class="box-heading">💾 DDL Schema & Relational Integrity</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+                        Created database <code>company_insights_db</code> with strict InnoDB foreign key constraints (<code>ON DELETE CASCADE</code>) 
+                        linking <code>employees.Department → departments.Department</code> and <code>sales.EmployeeID → employees.EmployeeID</code>.
+                    </p>
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <strong>1. Aggregations & Grouping</strong>
+                            <p>Used <code>GROUP BY</code> with <code>SUM()</code>, <code>AVG()</code>, and <code>COUNT()</code> to summarize department salaries and regional revenue.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>2. Filtered Grouping (HAVING)</strong>
+                            <p>Used <code>HAVING AVG(Salary) > 80000</code> to identify high-paying departments after aggregation.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>3. Conditional Bucket Logic</strong>
+                            <p>Implemented <code>CASE WHEN</code> statements to categorize staff into High Performer, Average, and Needs Improvement tiers.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>4. Relational Joins</strong>
+                            <p>Utilized <code>INNER JOIN</code> between <code>employees</code> and <code>sales</code> to rank top sales representatives by total revenue.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python Analysis Section -->
+        <section id="python">
+            <div class="container">
+                <h2 class="section-title">Python & Pandas Exploratory Analysis</h2>
+                <p class="section-subtitle">Automated data quality inspection, cleaning, and visual chart generation</p>
+                
+                <div class="analysis-box">
+                    <h3 class="box-heading">🐍 Pandas Workflow (`python/data_cleaning.ipynb`)</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <strong>Data Quality Audit</strong>
+                            <p>Verified 0 missing values (<code>isnull().sum()</code>) and 0 duplicate rows (<code>duplicated().sum()</code>) across all tables.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Date Field Standardization</strong>
+                            <p>Converted date strings to Pandas <code>datetime64[ns]</code> format for accurate temporal trend calculations.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Empirical Groupby Aggregations</strong>
+                            <p>Computed departmental headcount, mean salary, regional profit margin percentages, and yearly revenue growth.</p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Matplotlib Data Visualizations</strong>
+                            <p>Generated clean bar charts for regional revenue and department salaries, alongside line trend plots for 2020–2024.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Power BI Section -->
+        <section id="powerbi">
+            <div class="container">
+                <h2 class="section-title">Power BI 3-Page Dashboard Blueprint</h2>
+                <p class="section-subtitle">Interactive visual analytics layout powered by beginner-friendly DAX measures</p>
+                
+                <div class="card-grid">
+                    <div class="data-card">
+                        <h3 class="card-title" style="color: var(--primary);">Page 1 — Executive Overview</h3>
+                        <p class="card-desc">High-level management summary with core KPIs and corporate trends.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">KPI Cards</span> <span class="col-desc">Total Revenue, Profit, Margin %, Employees</span></li>
+                            <li><span class="col-name">Main Charts</span> <span class="col-desc">Revenue Line Trend, Regional Donut Chart</span></li>
+                            <li><span class="col-name">Slicers</span> <span class="col-desc">Date Range Slider, Region Selector</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="data-card">
+                        <h3 class="card-title" style="color: var(--accent);">Page 2 — Sales Analysis</h3>
+                        <p class="card-desc">Deep-dive into regional profit margins, product categories, and top reps.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">Category Breakdown</span> <span class="col-desc">Sales & Profit by Category Column Chart</span></li>
+                            <li><span class="col-name">Rep Table</span> <span class="col-desc">Top 5 Sales Reps Ranked Matrix</span></li>
+                            <li><span class="col-name">Slicers</span> <span class="col-desc">Year, Region, Product Category</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="data-card">
+                        <h3 class="card-title" style="color: var(--success);">Page 3 — HR Analytics</h3>
+                        <p class="card-desc">Workforce distribution, compensation benchmark, and ratings.</p>
+                        <ul class="column-list">
+                            <li><span class="col-name">Salary Chart</span> <span class="col-desc">Avg Salary by Department Column Chart</span></li>
+                            <li><span class="col-name">Performance Chart</span> <span class="col-desc">Avg Performance Rating per Department</span></li>
+                            <li><span class="col-name">Demographics</span> <span class="col-desc">Gender Donut & City Location Bar Charts</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="analysis-box" style="margin-top: 2rem;">
+                    <h3 class="box-heading">🧮 DAX Measures Setup (`powerbi/DAX_NOTES.md`)</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <strong>Total Sales</strong>
+                            <p><code>Total Sales = SUM(sales[Sales])</code></p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Total Profit</strong>
+                            <p><code>Total Profit = SUM(sales[Profit])</code></p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Profit Margin %</strong>
+                            <p><code>Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)</code></p>
+                        </li>
+                        <li class="feature-item">
+                            <strong>Total Employees</strong>
+                            <p><code>Total Employees = COUNTROWS(employees)</code></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Business Insights Section -->
+        <section id="insights">
+            <div class="container">
+                <h2 class="section-title">Empirical Business Insights</h2>
+                <p class="section-subtitle">Verified insights calculated directly from the project datasets</p>
+                
+                <div class="insights-grid">
+                    <div class="insight-card success">
+                        <h3 class="insight-title">Highest Average Salary</h3>
+                        <div class="insight-metric">₹84,917.65</div>
+                        <p class="insight-desc">Finance department leads company compensation, followed closely by IT at ₹84,159.09.</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <h3 class="insight-title">Top Revenue Sales Region</h3>
+                        <div class="insight-metric">₹1,372,223.31</div>
+                        <p class="insight-desc">South region leads in gross revenue, generating ₹203,341.20 in net profit.</p>
+                    </div>
+
+                    <div class="insight-card accent">
+                        <h3 class="insight-title">Best Profit Margin Region</h3>
+                        <div class="insight-metric">15.86%</div>
+                        <p class="insight-desc">West region achieves the highest profit margin efficiency despite lower total revenue.</p>
+                    </div>
+
+                    <div class="insight-card warning">
+                        <h3 class="insight-title">Top Product Category</h3>
+                        <div class="insight-metric">₹1,211,686.62</div>
+                        <p class="insight-desc">Software is the largest product category driver, generating ₹185,585.84 in profit.</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <h3 class="insight-title">Peak Growth Year</h3>
+                        <div class="insight-metric">₹1,143,544.39</div>
+                        <p class="insight-desc">Annual revenue reached its 5-year peak in 2023 before stabilizing in 2024.</p>
+                    </div>
+
+                    <div class="insight-card success">
+                        <h3 class="insight-title">Top Department Performance</h3>
+                        <div class="insight-metric">4.13 / 5.0</div>
+                        <p class="insight-desc">Marketing department achieves the highest average employee performance rating.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Demonstrated Data Analyst Skills</h2>
+                <p class="section-subtitle">Technical skills applied directly in this portfolio project</p>
+                
+                <div class="skills-grid">
+                    <span class="skill-pill">MySQL Database</span>
+                    <span class="skill-pill">SQL Aggregations</span>
+                    <span class="skill-pill">Relational Joins</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">Pandas Dataframes</span>
+                    <span class="skill-pill">Matplotlib Visuals</span>
+                    <span class="skill-pill">Power BI</span>
+                    <span class="skill-pill">DAX Measures</span>
+                    <span class="skill-pill">Data Cleaning</span>
+                    <span class="skill-pill">Exploratory Data Analysis (EDA)</span>
+                    <span class="skill-pill">HTML5 & CSS3</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Company Insights 360</strong> — Fresher Data Analyst Portfolio Project</p>
+            <p class="footer-sub">Built with pure HTML5 & CSS3 • Zero JavaScript • Structured for Resume & Technical Interviews</p>
+        </div>
+    </footer>
+
+</body>
+</html>
